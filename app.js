@@ -1,25 +1,14 @@
 
-var express = require('express');
+var app = require('./config/server')
+// modeling commomjs use example
 var msg = require('./mod_test');
 
+var newsRoute = require('./app/routes/news');
+newsRoute(app);
 
-var app = express();
+var homeRoutes = require('./app/routes/home')(app);
 
-// using ejs lib to dynamic html use thrught ejs file
-app.set('view engine', 'ejs');
-
-// dinamic html view
-app.get('/', function(req,res){
-	res.render("home/index");
-});
-
-app.get('/form_add_news', function(req, res){
-	res.render('admin/form_add_news');
-});
-
-app.get('/news', function(req, res){
-	res.render('news/news');
-});
+var form_add_newsRoute = require('./app/routes/form_add_news')(app);
 
 app.listen(3000, function(){
 	//info showing on console
