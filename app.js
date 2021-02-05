@@ -7,11 +7,15 @@ app.set('view engine', 'ejs');
 
 // dinamic html view
 app.get('/', function(req,res){
-	res.send("<html><body>News Portal</body></html>");
+	res.render("home/index");
 });
 
-app.get('/technology', function(req, res){
-	res.render('section/technology');
+app.get('/form_add_news', function(req, res){
+	res.render('admin/form_add_news');
+});
+
+app.get('/news', function(req, res){
+	res.render('news/news');
 });
 
 app.listen(3000, function(){

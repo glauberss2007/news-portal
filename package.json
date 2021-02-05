@@ -1,0 +1,24 @@
+{
+  "name": "news-portal",
+  "version": "1.0.0",
+  "description": "News portal",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glauberss2007/news-portal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glauberss2007/news-portal/issues"
+  },
+  "homepage": "https://github.com/glauberss2007/news-portal#readme"
+}
