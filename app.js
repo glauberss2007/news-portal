@@ -1,5 +1,8 @@
 
 var express = require('express');
+var msg = require('./mod_test');
+
+
 var app = express();
 
 // using ejs lib to dynamic html use thrught ejs file
@@ -20,5 +23,5 @@ app.get('/news', function(req, res){
 
 app.listen(3000, function(){
 	//info showing on console
-	console.log("Server running on express");
+	console.log(msg());
 });
